@@ -1,0 +1,126 @@
+/* circular image */
+.circular-image-container {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+.circular-image {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+
+
+/* row container */
+.row-container {
+    display: flex;
+}
+
+/* .element {
+    flex: 1;
+} */
+
+/* blog name */
+.blogger-name {
+    margin-left: 10px;
+    margin-top: -2px;
+    color: rgb(0, 0, 0);
+}
+
+/* blog header */
+.blog-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* blog description */
+.blog-description {
+    font-size: 15px;
+    color: rgb(117, 117, 117);
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top {
+    margin-top: 2px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-right {
+    margin-right: 5px;
+}
+
+.negative-margin-top {
+    margin-top: -4px;
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.align-right {
+    text-align: right;
+    float: right;
+    width: 300px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.greycolor {
+    color: rgb(117, 117, 117);
+}
+
+
+.blog-topic {
+    color: rgb(117, 117, 117);
+    border-radius: 50px;
+    background-color: rgb(242, 242, 242);
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
+.blog-topic:hover {
+    color: rgb(117, 117, 117);
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
+.column {
+    float: left;
+    /* width: 50%; */
+}
+
+.blog-img {
+    margin-left: 20px;
+    width: 200px;
+    height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.width {
+    width: 600px;
+}
