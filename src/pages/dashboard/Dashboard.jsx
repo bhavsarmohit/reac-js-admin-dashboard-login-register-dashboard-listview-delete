@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 import './Dashboard.css';
 
@@ -8,42 +8,38 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 import Header from '../../components/dashboard/Header';
-import Sidebar_Nav from '../../components/dashboard/Sidebar_Nav';
-import Dashboard_Home from '../../components/dashboard/Dashboard_Home';
 import { ToastContainer, toast } from 'react-toastify';
-import Blog_Lists from '../../components/dashboard/Blog_Lists';
+import DashboardHome from '../../components/dashboard/DashboardHome';
+import BlogLists from '../../components/dashboard/BlogLists';
+import SidebarNav from '../../components/dashboard/SidebarNav';
 
 export const Dashboard = () => {
 
-    const [uemail, setuemail] = useState(localStorage.getItem("uemail"));
-    let upass = localStorage.getItem("upass");
-    let uname = localStorage.getItem("uname");
-    let umobile = localStorage.getItem("umobile");
-
-    const navigate = useNavigate();
-
-    // =====================
-    // CUSTOM LOGIN VALIDATION
-    useEffect(() => {
-        if (uemail === null || uemail === '') {
-            console.log(uemail);
-            navigate('/login');
-        }
-    })
-    // =====================
-
-    const logout = () => {
-        localStorage.removeItem("uemail")
-        localStorage.removeItem("upass")
-        localStorage.removeItem("uname")
-        localStorage.removeItem("umobile")
-
-        window.location.reload()
-    }
+    // const [uemail, setuemail] = useState(localStorage.getItem("uemail"));
+    // let upass = localStorage.getItem("upass");
+    // let uname = localStorage.getItem("uname");
+    // let umobile = localStorage.getItem("umobile");
+    // const navigate = useNavigate();
+    // // =====================
+    // // CUSTOM LOGIN VALIDATION
+    // useEffect(() => {
+    //     if (uemail === null || uemail === '') {
+    //         console.log(uemail);
+    //         navigate('/login');
+    //     }
+    // })
+    // // =====================
+    // const logout = () => {
+    //     localStorage.removeItem("uemail")
+    //     localStorage.removeItem("upass")
+    //     localStorage.removeItem("uname")
+    //     localStorage.removeItem("umobile")
+    //     window.location.reload()
+    // }
 
 
     const [dashboardSidebarNavComponent, setDashboardSidebarNavComponent] = useState('blog_lists');
-    const handleDataReceiveSidebar_Nav = (component) => {
+    const handleDataReceiveSidebarNav = (component) => {
 
         console.log("Received data from child component:", component);
         setDashboardSidebarNavComponent(component);
@@ -52,27 +48,27 @@ export const Dashboard = () => {
 
     const dashboardComponent = () => {
         switch (dashboardSidebarNavComponent) {
-            case 'dashboard_home':
-                return <Dashboard_Home />;
-                break;
+            case 'DashboardHome':
+                return <DashboardHome />;
+            // break;
 
-            case 'blog_lists':
-                return <Blog_Lists />;
-                break;
+            case 'BlogLists':
+                return <BlogLists />;
+            // break;
 
-            case 'blog_accordion':
+            case 'BlogAccordion':
                 toast.info("clicked on accordion");
-                return <Dashboard_Home />;
-                break;
+                return <DashboardHome />;
+            // break;
 
-            case 'about_contact':
+            case 'AboutContact':
                 toast.info('clicked on contact')
-                return <Dashboard_Home />;
-                // Toast
-                break;
+                return <DashboardHome />;
+            // Toast
+            // break;
             default:
-                return <Dashboard_Home />;
-                break;
+                return <DashboardHome />;
+            // break;
         }
         // dashboardSidebarNavComponent=='' return <Dashboard_Home />;
     }
@@ -83,7 +79,7 @@ export const Dashboard = () => {
             <ToastContainer />
             <Header />
 
-            <Sidebar_Nav onSidebarNavSelect={handleDataReceiveSidebar_Nav} />
+            <SidebarNav onSidebarNavSelect={handleDataReceiveSidebarNav} />
             <main id="main" className="main">
                 {
                     dashboardComponent()

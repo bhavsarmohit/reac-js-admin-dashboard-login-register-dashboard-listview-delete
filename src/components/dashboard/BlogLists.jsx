@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import './Blog_Lists.css';
+import './BlogLists.css';
 
 import img from "../../assets/img/img.png";
 
@@ -9,7 +9,7 @@ import img_blog from "../../assets/img/img_blog.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookBookmark, faBookmark, faCoffee, faStar } from '@fortawesome/free-solid-svg-icons';
 
-const Blog_Lists = () => {
+const BlogLists = () => {
 
     const [Blogs, setBlogs] = useState([{ 'username': 'John DeVore', 'title': 'Why I Support The WGA Strike', 'detail': 'This isn’t a Hollywood story — it’s about the future of work, too', },
     { 'username': 'Mohit Bhavsar', 'title': 'Development is necessary!', 'detail': ' a placeholder text commonly used in the design and typesetting industry.', },
@@ -125,4 +125,4 @@ const Blog_Lists = () => {
     )
 }
 
-export default Blog_Lists;
+export default BlogLists;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Dashboard_Home = () => {
+const DashboardHome = () => {
     return (
         <>
             <div>
@@ -654,4 +654,4 @@ const Dashboard_Home = () => {
     )
 }
 
-export default Dashboard_Home;
+export default DashboardHome;

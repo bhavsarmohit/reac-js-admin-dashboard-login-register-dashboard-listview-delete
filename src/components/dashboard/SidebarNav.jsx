@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Sidebar_Nav = (props) => {
+const SidebarNav = (props) => {
     return (
         <>
             <aside id="sidebar" className="sidebar">
@@ -9,7 +9,7 @@ const Sidebar_Nav = (props) => {
                 <ul className="sidebar-nav" id="sidebar-nav">
 
                     <li className="nav-item">
-                        <Link className="nav-link " onClick={() => { props.onSidebarNavSelect('dashboard_home') }}>
+                        <Link className="nav-link " onClick={() => { props.onSidebarNavSelect('DashboardHome') }}>
                             <i className="bi bi-grid"></i>
                             <span>Dashboard</span>
                         </Link>
@@ -22,12 +22,12 @@ const Sidebar_Nav = (props) => {
                         <ul id="components-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
                             <li>
 
-                                <Link onClick={() => { props.onSidebarNavSelect('blog_lists') }}>
+                                <Link onClick={() => { props.onSidebarNavSelect('BlogLists') }}>
                                     <i className="bi bi-circle"></i><span>Lists</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link onClick={() => { props.onSidebarNavSelect('blog_accordion') }}>
+                                <Link onClick={() => { props.onSidebarNavSelect('BlogAccordion') }}>
                                     <i className="bi bi-circle"></i><span>Accordion</span>
                                 </Link>
                             </li>
@@ -38,7 +38,7 @@ const Sidebar_Nav = (props) => {
                     <li className="nav-heading">About</li>
 
                     <li className="nav-item">
-                        <Link className="nav-link collapsed" onClick={() => { props.onSidebarNavSelect('about_contact') }}>
+                        <Link className="nav-link collapsed" onClick={() => { props.onSidebarNavSelect('AboutContact') }}>
                             <i className="bi bi-envelope"></i>
                             <span>Contact</span>
                         </Link>
@@ -52,4 +52,4 @@ const Sidebar_Nav = (props) => {
     )
 }
 
-export default Sidebar_Nav;
+export default SidebarNav;
